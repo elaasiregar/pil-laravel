@@ -20,9 +20,7 @@ Route::get('profile', function () {
 });
 
 Route::get('array', function () {
-    $nilai_awal = 1;
-    while ($nilai_awal <= 50) {
-        echo 'Halooo ' . $nilai_awal . 'x<br>';
-        $nilai_awal++;
+    for ($i = 1; $i < 5; $i++) {
+        echo 'Heloo world' . $i . 'x<br>';
     }
 });
