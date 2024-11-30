@@ -39,8 +39,46 @@
         </div>
     </nav>
 
-    <div class="container" style="margin-left: 20px">
+    <div class="container">
         <h1>Ini Halaman Mahasiswa</h1>
+
+        {{--
+        ROWSPAN-MENGGABUNGKAN GARIS
+        COLSPAN- MENGGABUNGKAN KOLOM
+        --}}
+
+        <table class="table table-danger table-sm table-hover table-striped table-bordered text-center">
+            <thead>
+                <tr>
+                    <th>NPM</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>Jenis Kelamin</th>
+                    <th colspan="2">TTL</th>
+                </tr>
+            <tbody>
+                <tr>
+                    <td>123</td>
+                    <td>Ela</td>
+                    <td>Perempuan</td>
+                    <td>29-04-2003</td>
+                    <td rowspan="3">Medan</td>
+                </tr>
+                <tr>
+                    <td>124</td>
+                    <td>Aulia</td>
+                    <td>Perempuan</td>
+                    <td>13-10-2004</td>
+                </tr>
+                <tr>
+                    <td>125</td>
+                    <td>Pani</td>
+                    <td>Laki-Laki</td>
+                    <td>23-10-2021</td>
+                </tr>
+
+            </tbody>
+            </thead>
+        </table>
     </div>
 
 
