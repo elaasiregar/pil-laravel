@@ -18,3 +18,11 @@ Route::get('profile', function () {
     $nama = 'Elaa';
     return view('profile', compact('nama'));
 });
+
+Route::get('array', function () {
+    $nilai_awal = 1;
+    while ($nilai_awal <= 50) {
+        echo 'Halooo ' . $nilai_awal . 'x<br>';
+        $nilai_awal++;
+    }
+});
