@@ -40,7 +40,7 @@
     </nav>
 
     <div class="container" style="margin-left: 20px">
-        <h1>ini home</h1>
+        <h1>Ini Halaman home</h1>
     </div>
 
 
