@@ -55,27 +55,19 @@
                     <th>Jenis Kelamin</th>
                     <th colspan="2">TTL</th>
                 </tr>
+            </thead>
             <tbody>
-                <tr>
-                    <td>123</td>
-                    <td>Ela</td>
-                    <td>Perempuan</td>
-                    <td>29-04-2003</td>
-                    <td rowspan="3">Medan</td>
-                </tr>
-                <tr>
-                    <td>124</td>
-                    <td>Aulia</td>
-                    <td>Perempuan</td>
-                    <td>13-10-2004</td>
-                </tr>
-                <tr>
-                    <td>125</td>
-                    <td>Pani</td>
-                    <td>Laki-Laki</td>
-                    <td>23-10-2021</td>
-                </tr>
-
+                <?php $nilai_awal = 0; ?>
+                @while ($nilai_awal < $jumlah)
+                    <tr>
+                        <td>{{ $npm[$nilai_awal] }}</td>
+                        <td>{{ $nama[$nilai_awal] }}</td>
+                        <td>Perempuan</td>
+                        <td>29-04-2003</td>
+                        <td>Medan</td>
+                    </tr>
+                    <?php    $nilai_awal++; ?>
+                @endwhile
             </tbody>
             </thead>
         </table>
@@ -85,7 +77,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 
