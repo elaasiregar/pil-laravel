@@ -57,17 +57,15 @@
                 </tr>
             </thead>
             <tbody>
-                <?php $nilai_awal = 0; ?>
-                @while ($nilai_awal < $jumlah)
-                    <tr>
-                        <td>{{ $npm[$nilai_awal] }}</td>
-                        <td>{{ $nama[$nilai_awal] }}</td>
-                        <td>Perempuan</td>
-                        <td>29-04-2003</td>
-                        <td>Medan</td>
-                    </tr>
-                    <?php    $nilai_awal++; ?>
-                @endwhile
+                @for ($i = 0; $i < $jumlah; $i++)
+                <tr>
+                    <td>{{ $npm[$i] }}</td>
+                    <td>{{ $nama[$i] }}</td>
+                    <td>laki-laki</td>
+                    <td>kota medan</td>
+                </tr>
+                @endfor
+
             </tbody>
             </thead>
         </table>
