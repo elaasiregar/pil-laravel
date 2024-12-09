@@ -55,14 +55,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @for ($i = 0; $i < $jumlah; $i++)
-                    <tr>
-                        <td>{{ $npm[$i] }}</td>
-                        <td>{{ $nama[$i] }}</td>
-                        <td>laki-laki</td>
-                        <td>kota medan</td>
-                    </tr>
-                    @endfor
+                    
                 </tbody>
             </table>
         </div>
