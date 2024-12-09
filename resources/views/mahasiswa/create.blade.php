@@ -76,7 +76,7 @@
                         <button class="btn btn-primary" style="width: 100%" type="button">Simpan</button>
                 </div>
                 <div class="col-sm-6">
-                    <a href="/mahasiswa" class="btn btn-secondary" style="width: 100%">Kembali </a>
+                    <a href="/mahasiswa" class="btn btn-secondary" style="width: 100%/">Kembali </a>
 
                 </div>
                 
