@@ -5,4 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 //routes
 
-route::get('mahasiswa', [mahasiswaController::class, 'index']);
+Route::resource('mahasiswa', mahasiswaController::class);
