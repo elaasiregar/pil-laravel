@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('mahasiswa2', function (Blueprint $table) {
             $table->id();
-            $table->integer('npm')->unique();
+            $table->bigint('npm')->unique();
             $table->string('nama_mahasiswa', 35)->nullable();
             $table->enum('jk', ['L', 'P']);
             $table->date('tgl_lahir')->nullable();
@@ -26,6 +26,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('mahasiswa');
+        Schema::dropIfExists('mahasiswa2');
     }
 };

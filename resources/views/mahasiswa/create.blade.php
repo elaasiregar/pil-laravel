@@ -40,47 +40,68 @@
     </nav>
 
     <div class="container">
-        <h1>Ini Halaman Tambah Mahasiswa</h1>
+        <h1>Halaman Tambah Mahasiswa</h1>
 
-       
         <div class="col-sm-12">
             <h4>form mahasiswa</h4>
-            <form action="" method="GET">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <label for="">NPM</label>
-                <input type="number" name="npm" class="form-control" placeholder="Input NPM"> 
-                    </div>
-                    <div class="col-sm-6">
-                        <label for="">Nama Mahasiswa</label>
-                <input type="text" name="nama-mahasiswa" class="form-control" placeholder="Input Nama Mahasiswa">
+
+            @if ($errors->any())
+                <div class="pt-3">
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $item)
+                            <li>{{ $item }}</li>
+                                
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
+            @endif
+
+
+            <form action="/mahasiswa" method="POST">
+                @csrf 
                 <div class="row">
-                    <div class="col-sm-6">
-                        <label for="">Tanggal Lahir</label>
-                        <input type="date" name="tgl_lahir" class="form-control">
+                    <div class="col-sm-4">
+                        <label for="">NPM</label>
+                <input type="number" name="npm" class="form-control" placeholder="Input NPM" value="{{ Session::get('npm') }}"> 
                     </div>
-                    <div class="col-sm-6">
-                        <label for="">Prodi</label>
-                        <select name="prodi" class="form-control">
-                            <option value="">Sistem Informasi</option>
-                            <option value="">Teknik Informasi</option>
-                            <option value="">Sains Data</option>
+                    <div class="col-sm-4">
+                        <label for="">Nama Mahasiswa</label>
+                <input type="text" name="nama-mahasiswa" class="form-control" placeholder="Input Nama Mahasiswa" value="{{ Session::get('nama_mahasiswa') }}">
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="">Jenis Kelamin</label>
+                        <select name="jk" id="" class="form-select">
+                            <option>L</option>
+                            <option>P</option>
                         </select>
                     </div>
                 </div>
-                <div class="row mt-2">
-                    
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <label for="">Tanggal Lahir</label>
+                        <input type="date" name="tgl_lahir" class="form-control" value="{{ Session::get('tgl_lahir') }}">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Alamat</label>
+                                <input type="text" name="alamat" id="" class="form-control" placeholder="input alamat" value="{{ Session::get('alamat') }}">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="row mt-4">
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary" style="width: 100%" type="submit">Simpan</button>
+                    </div>
                     <div class="col-sm-6">
-                        <button class="btn btn-primary" style="width: 100%" type="button">Simpan</button>
-                </div>
-                <div class="col-sm-6">
-                    <a href="/mahasiswa" class="btn btn-secondary" style="width: 100%/">Kembali </a>
-
-                </div>
-                
-
+                        <a href="/mahasiswa" class="btn btn-secondary" style="width: 100%">Kembali </a>
+    
+                    </div></div>  
+                    </div>
                 </div>
             </form>
 
